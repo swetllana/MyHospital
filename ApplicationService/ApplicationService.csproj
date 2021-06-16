@@ -54,9 +54,11 @@
     <Compile Include="DTOs\DoctorDTO.cs" />
     <Compile Include="DTOs\PatientDTO.cs" />
     <Compile Include="DTOs\TestDTO.cs" />
+    <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Implementations\DoctorManagementService.cs" />
     <Compile Include="Implementations\PatientManagementService.cs" />
     <Compile Include="Implementations\TestManagementService.cs" />
+    <Compile Include="Implementations\UserManagementService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

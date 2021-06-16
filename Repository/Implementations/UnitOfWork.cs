@@ -14,6 +14,7 @@ namespace Repository.Implementations
         private GenericRepository<Doctor> doctorRepository;
         private GenericRepository<Patient> patientRepository;
         private GenericRepository<Test> testRepository;
+        private GenericRepository<User> userRepository;
 
 
         public GenericRepository<Doctor> DoctorRepository
@@ -51,6 +52,19 @@ namespace Repository.Implementations
                     this.testRepository = new GenericRepository<Test>(context);
                 }
                 return testRepository;
+            }
+        }
+
+        public GenericRepository<User> UserRepository
+        {
+            get
+            {
+
+                if (this.userRepository == null)
+                {
+                    this.userRepository = new GenericRepository<User>(context);
+                }
+                return userRepository;
             }
         }
 

@@ -179,6 +179,30 @@ namespace MVC.SOAPService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteTest", ReplyAction="http://tempuri.org/IService1/DeleteTestResponse")]
         System.Threading.Tasks.Task<string> DeleteTestAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUsers", ReplyAction="http://tempuri.org/IService1/GetUsersResponse")]
+        ApplicationService.DTOs.UserDTO[] GetUsers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUsers", ReplyAction="http://tempuri.org/IService1/GetUsersResponse")]
+        System.Threading.Tasks.Task<ApplicationService.DTOs.UserDTO[]> GetUsersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUserByID", ReplyAction="http://tempuri.org/IService1/GetUserByIDResponse")]
+        ApplicationService.DTOs.UserDTO GetUserByID(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUserByID", ReplyAction="http://tempuri.org/IService1/GetUserByIDResponse")]
+        System.Threading.Tasks.Task<ApplicationService.DTOs.UserDTO> GetUserByIDAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PostUsers", ReplyAction="http://tempuri.org/IService1/PostUsersResponse")]
+        string PostUsers(ApplicationService.DTOs.UserDTO userDTO);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PostUsers", ReplyAction="http://tempuri.org/IService1/PostUsersResponse")]
+        System.Threading.Tasks.Task<string> PostUsersAsync(ApplicationService.DTOs.UserDTO userDTO);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteUser", ReplyAction="http://tempuri.org/IService1/DeleteUserResponse")]
+        string DeleteUser(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteUser", ReplyAction="http://tempuri.org/IService1/DeleteUserResponse")]
+        System.Threading.Tasks.Task<string> DeleteUserAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -342,6 +366,38 @@ namespace MVC.SOAPService {
         
         public System.Threading.Tasks.Task<string> DeleteTestAsync(int id) {
             return base.Channel.DeleteTestAsync(id);
+        }
+        
+        public ApplicationService.DTOs.UserDTO[] GetUsers() {
+            return base.Channel.GetUsers();
+        }
+        
+        public System.Threading.Tasks.Task<ApplicationService.DTOs.UserDTO[]> GetUsersAsync() {
+            return base.Channel.GetUsersAsync();
+        }
+        
+        public ApplicationService.DTOs.UserDTO GetUserByID(int id) {
+            return base.Channel.GetUserByID(id);
+        }
+        
+        public System.Threading.Tasks.Task<ApplicationService.DTOs.UserDTO> GetUserByIDAsync(int id) {
+            return base.Channel.GetUserByIDAsync(id);
+        }
+        
+        public string PostUsers(ApplicationService.DTOs.UserDTO userDTO) {
+            return base.Channel.PostUsers(userDTO);
+        }
+        
+        public System.Threading.Tasks.Task<string> PostUsersAsync(ApplicationService.DTOs.UserDTO userDTO) {
+            return base.Channel.PostUsersAsync(userDTO);
+        }
+        
+        public string DeleteUser(int id) {
+            return base.Channel.DeleteUser(id);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeleteUserAsync(int id) {
+            return base.Channel.DeleteUserAsync(id);
         }
     }
 }

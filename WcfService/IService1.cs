@@ -65,6 +65,19 @@ namespace WcfService
 
         [OperationContract]
         string DeleteTest(int id);
+
+        /* Users */
+        [OperationContract]
+        List<UserDTO> GetUsers();
+
+        [OperationContract]
+        UserDTO GetUserByID(int id);
+
+        [OperationContract]
+        string PostUsers(UserDTO userDTO);
+
+        [OperationContract]
+        string DeleteUser(int id);
         // TODO: Add your service operations here
     }
 
