@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ApplicationService\ApplicationService.csproj">
-      <Project>{7D06ED9D-B51D-4490-8641-7BDCA33D9E96}</Project>
+      <Project>{7d06ed9d-b51d-4490-8641-7bdca33d9e96}</Project>
       <Name>ApplicationService</Name>
     </ProjectReference>
   </ItemGroup>

@@ -172,5 +172,39 @@ namespace WcfService
                 return "Test is deleted!";
             }
         }
+        private UserManagementService userService = new UserManagementService();
+        public List<UserDTO> GetUsers()
+        {
+            return userService.Get();
+        }
+
+        public UserDTO GetUserByID(int id)
+        {
+            return userService.GetById(id);
+        }
+
+        public string PostUsers(UserDTO userDTO)
+        {
+            if (!userService.Save(userDTO))
+            {
+                return "User is not saved!";
+            }
+            else
+            {
+                return "User is saved!";
+            }
+        }
+
+        public string DeleteUser(int id)
+        {
+            if (!userService.Delete(id))
+            {
+                return "User is not deleted!";
+            }
+            else
+            {
+                return "User is deleted!";
+            }
+        }
     }
 }
