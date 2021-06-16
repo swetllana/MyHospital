@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ApplicationService.DTOs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDoctors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDoctors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDoctorByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDoctorByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostDoctors_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostDoctors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostDoctors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostDoctorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PutDoctor_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutDoctor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PutDoctor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteDoctor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDoctor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteDoctor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatients" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatientByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatientByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostPatients_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostPatients" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostPatients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostPatientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PutPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutPatient" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PutPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePatient" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTests_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTests" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTestByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTestByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostTests_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostTests" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostTests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostTestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PutTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutTest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PutTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDoctors" message="tns:IService1_GetDoctors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDoctorsResponse" message="tns:IService1_GetDoctors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDoctorByID" message="tns:IService1_GetDoctorByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDoctorByIDResponse" message="tns:IService1_GetDoctorByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostDoctors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PostDoctors" message="tns:IService1_PostDoctors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PostDoctorsResponse" message="tns:IService1_PostDoctors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutDoctor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PutDoctor" message="tns:IService1_PutDoctor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PutDoctorResponse" message="tns:IService1_PutDoctor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoctor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteDoctor" message="tns:IService1_DeleteDoctor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteDoctorResponse" message="tns:IService1_DeleteDoctor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPatients" message="tns:IService1_GetPatients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPatientsResponse" message="tns:IService1_GetPatients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPatientByID" message="tns:IService1_GetPatientByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPatientByIDResponse" message="tns:IService1_GetPatientByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostPatients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PostPatients" message="tns:IService1_PostPatients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PostPatientsResponse" message="tns:IService1_PostPatients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PutPatient" message="tns:IService1_PutPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PutPatientResponse" message="tns:IService1_PutPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletePatient" message="tns:IService1_DeletePatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletePatientResponse" message="tns:IService1_DeletePatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTests">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTests" message="tns:IService1_GetTests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTestsResponse" message="tns:IService1_GetTests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTestByID" message="tns:IService1_GetTestByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTestByIDResponse" message="tns:IService1_GetTestByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostTests">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PostTests" message="tns:IService1_PostTests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PostTestsResponse" message="tns:IService1_PostTests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PutTest" message="tns:IService1_PutTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PutTestResponse" message="tns:IService1_PutTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteTest" message="tns:IService1_DeleteTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteTestResponse" message="tns:IService1_DeleteTest_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctors">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDoctors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDoctorByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostDoctors">
+      <soap:operation soapAction="http://tempuri.org/IService1/PostDoctors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutDoctor">
+      <soap:operation soapAction="http://tempuri.org/IService1/PutDoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoctor">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteDoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatients">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPatients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPatientByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostPatients">
+      <soap:operation soapAction="http://tempuri.org/IService1/PostPatients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutPatient">
+      <soap:operation soapAction="http://tempuri.org/IService1/PutPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatient">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTests">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTestByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostTests">
+      <soap:operation soapAction="http://tempuri.org/IService1/PostTests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutTest">
+      <soap:operation soapAction="http://tempuri.org/IService1/PutTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTest">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfService/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,66 @@
+﻿@model MVC.ViewModels.PatientVM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PatientVM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Insurance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Insurance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAdmitted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAdmitted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCheckedOut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCheckedOut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Doctor_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doctor_Id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.Patient_Id  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
